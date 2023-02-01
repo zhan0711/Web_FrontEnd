@@ -1,0 +1,262 @@
+<!--
+    Name: Yuan Zhang
+    Date: Oct 29, 2022
+    Section: CST 8285 section 302 Assignment 01
+    This is the courses.html page. It dispalys the information about curriculum.
+        * Use flip function to show the course information and the course image as a card.
+        * Search/Filter and Sort functions are not active at the moment.
+        * Use grid to display.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Yuan Zhang's Currisulum</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Yuan Zhang">
+        <meta name="description" content="create a web page about myself.">
+        <meta name="keywords" content="curriculum courses">
+        <!-- The styles used in this page -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <form action="process.php" method="get" enctype="text/plain"></form>
+        <header>
+            <h1 id="head1">Courses</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">homepage</a></li>
+                    <li><a href="Assignment_1_Resume.html">resume</a></li>
+                    <li><a href="#">courses</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <ul class="search">
+                <li>
+                    <div class="search-box">
+                        <label for="search-box">search course </label>
+                        <input type="text" id="search-box" placeholder="Search by course title...">
+                        <input type="submit" class="ss" value="Search">
+                    </div>
+                </li>
+                <li>
+                    <div class="drop-down">
+                        <label for="filter-by-level">filter by level</label>
+                        <select id="filter-by-level" size="3" multiple>
+                            <option>All</option>
+                            <option>01</option>
+                            <option>02</option>
+                        </select>
+                    </div>
+                </li>
+                <li>
+                    <div class="sort">
+                        <button class="sortbtn">sort | level</button>
+                        <div class="sort-content">
+                            <a href="#">Ascending</a>
+                            <a href="#">Descending</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="grid-container-course">
+                <div class="course">
+                    <div class="course-flip">
+                        <div class="flip-front">
+                            <img src="img/22S_MAT8001_Tech_Math_for_Computer_Science.jpg" alt="22s-MAT8001 Tech Mach for Computer Science">
+                        </div>
+                        <div class="flip-back">
+                            <p class="title"><span>Title: </span>Tech Math for Computer Science</p>
+                            <p class="level"><span>Level: </span>01</p>
+                            <p class="course-code"><span>Course Code: </span>22S-MAT8001</p>
+                            <p class="course-description">
+                                <span>Course Description: </span>
+                                The study of algebraic and transcendental functions is an essential prerequisite to Calculus.
+                                Students manipulate algebraic expressions, solve algebraic equations and linear systems and
+                                learn the properties of and graph algebraic and transcendental functions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="course">
+                    <div class="course-flip">
+                        <div class="flip-front">
+                            <img src="img/22S_ENL1813_Communications_I.jpg" alt="22S-ENL1813 Communications I">
+                        </div>
+                        <div class="flip-back">
+                            <p class="title"><span>Title: </span>Communications I</p>
+                            <p class="level"><span>Level: </span>01</p>
+                            <p class="course-code"><span>Course Code: </span>22S-ENL1813</p>
+                            <p class="course-description">
+                                <span>Course Description: </span>
+                                Communication remains an essential skill sought by employers, regardless of discipline or field
+                                of study. Using a practical, vocation-oriented approach, students develop stronger grammar and
+                                business writing skills to become effective business communicators.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="course">
+                    <div class="course-flip">
+                        <div class="flip-front">
+                            <img src="img/22S_CST8101_Comupter_Essentials_1.jpg" alt="22S-CST8101 Computer Essentials 1">
+                        </div>
+                        <div class="flip-back">
+                            <p class="title"><span>Title: </span>Computer Essentials 1</p>
+                            <p class="level"><span>Level: </span>01</p>
+                            <p class="course-code"><span>Course Code: </span>22S-CST8101</p>
+                            <p class="course-description">
+                                <span>Course Description: </span>
+                                In this course, you will learn the essentials of computer software, hardware, and laptop management
+                                form the foundation for building further technical programming skills.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="course">
+                    <div class="course-flip">
+                        <div class="flip-front">
+                            <img src="img/22S_CST8116_Intro_to_Computer_Programming.jpg" alt="22S-CST8116 Intro to Computer Programming">
+                        </div>
+                        <div class="flip-back">
+                            <p class="title"><span>Title: </span>Intro to Computer Programming</p>
+                            <p class="level"><span>Level: </span>01</p>
+                            <p class="course-code"><span>Course Code: </span>22S-CST8116</p>
+                            <p class="course-description">
+                                <span>Course Description: </span>
+                                In this course, you will learn how to possess the fundamentals of logic, problem-solving and
+                                programming language structure provides a solid foundation for further study in the field.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="course">
+                    <div class="course-flip">
+                        <div class="flip-front">
+                            <img src="img/22S_CST8215_Introduction_to_Database.jpg" alt="22S-CST8215 Introduction to Database">
+                        </div>
+                        <div class="flip-back">
+                            <p class="title"><span>Title: </span>Introduction to Database</p>
+                            <p class="level"><span>Level: </span>01</p>
+                            <p class="course-code"><span>Course Code: </span>22S-CST8215</p>
+                            <p class="course-description">
+                                <span>Course Description: </span>
+                                Students learn the fundamentals of relational databases design using Entity Relation Diagrams
+                                (ERDs), and use Structured Query Language (SQL) to create, modify and query a database.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="course">
+                    <div class="course-flip">
+                        <div class="flip-front">
+                            <img src="img/22S_CST8300_Achieving_Success_in_Changing_Envir.jpg" alt="22S-CST8300 Achieving Success in Changing Envir">
+                        </div>
+                        <div class="flip-back">
+                            <p class="title"><span>Title: </span>Achieving Success in Changing Envir</p>
+                            <p class="level"><span>Level: </span>01</p>
+                            <p class="course-code"><span>Course Code: </span>22S-CST8300</p>
+                            <p class="course-description">
+                                <span>Course Description: </span>
+                                Students explore the possibilities ahead, assess their own aptitudes and strengths, and
+                                apply critical thinking and decision-making tools to help resolve some of the important
+                                issues in our complex society with its competing interests.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="course">
+                    <div class="course-flip">
+                        <div class="flip-front">
+                            <img src="img/22F_CST2355_A_lSections_Database_Systems.jpg" alt="22F-CST2355 AllSections Database Systems">
+                        </div>
+                        <div class="flip-back">
+                            <p class="title"><span>Title: </span>AllSections Database Systems</p>
+                            <p class="level"><span>Level: </span>02</p>
+                            <p class="course-code"><span>Course Code: </span>22F-CST2355</p>
+                            <p class="course-description">
+                                <span>Course Description: </span>
+                                Students acquire practical experience using market-leading object-relational database
+                                management systems like Oracle and MySQL. Students obtain hands-on experience with advanced
+                                engineering modeling tools along with SQL, SQL scripts and programming with Oracle's PL/SQL blocks.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="course">
+                    <div class="course-flip">
+                        <div class="flip-front">
+                            <img src="img/22F_CST8102_Operating_Systems_Fund_(GNU_Linux).jpg" alt="22F-CST8102-Operating Systems Fund(GNU/Linux)">
+                        </div>
+                        <div class="flip-back">
+                            <p class="title"><span>Title: </span>Operating Systems Fund(GNU/Linux)</p>
+                            <p class="level"><span>Level: </span>02</p>
+                            <p class="course-code"><span>Course Code: </span>22F-CST8102</p>
+                            <p class="course-description">
+                                <span>Course Description: </span>
+                                Students explore the basic concepts and components of Operating Systems (OS), and how they
+                                function and interact with hardware and software components. Students examine the details of
+                                operating system structures, process management, storage management, installation, configuration,
+                                and administration both in theory and through practical assignments based on the GNU/Linux operating system.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="course">
+                    <div class="course-flip">
+                        <div class="flip-front">
+                            <img src="img/22F_CST8284_Object_Oriented_Programming(Java).jpg" alt="22F-CST8284 Object Oriented Programming(Java)">
+                        </div>
+                        <div class="flip-back">
+                            <p class="title"><span>Title: </span>Object Oriented Programming(Java)</p>
+                            <p class="level"><span>Level: </span>02</p>
+                            <p class="course-code"><span>Course Code: </span>22F-CST8284</p>
+                            <p class="course-description">
+                                <span>Course Description: </span>
+                                Students explore object-oriented programming methodology using the Java programming language.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="course">
+                    <div class="course-flip">
+                        <div class="flip-front">
+                            <img src="img/22F_CST8285_Web_Programming.jpg" alt="22F-CST8285 Web Programming">
+                        </div>
+                        <div class="flip-back">
+                            <p class="title"><span>Title: </span>Web Programming</p>
+                            <p class="level"><span>Level: </span>02</p>
+                            <p class="course-code"><span>Course Code: </span>22F-CST8285</p>
+                            <p class="course-description">
+                                <span>Course Description: </span>
+                                Students develop basic skills of web programming, website design and implementation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="course">
+                    <div class="course-flip">
+                        <div class="flip-front">
+                            <img src="img/22F_GEP1001_Cooperative_Education_Readiness.jpg" alt="22F-GEP1001 Cooperative Education Readiness">
+                        </div>
+                        <div class="flip-back">
+                            <p class="title"><span>Title: </span>Cooperative Education Readines</p>
+                            <p class="level"><span>Level: </span>02</p>
+                            <p class="course-code"><span>Course Code: </span>22F-GEP1001</p>
+                            <p class="course-description">
+                                <span>Course Description: </span>
+                                Cooperative education (Co-op) allows students to integrate their classroom learning
+                                with a real-world experience though paid work terms.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <nav><a href="#head1">Back to Top</a></nav>
+            <p id="coder">Format and code by Yuan Zhang.</p>
+        </footer>
+    </body>
+</html>
